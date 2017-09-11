@@ -55,8 +55,6 @@ def jugar(mano_casa, mano_jug, mazo, mostrar):
         if valor_mano(mano_casa) < valor_mano(mano_jug):
             return jugar(mano_casa + [mazo[0]], mano_jug, mazo[1:], mostrar)           
         else:
-            print("Casa: " + mostrar_mano(mano_casa) + "\n")
-            print("Jugador: " + mostrar_mano(mano_jug) + "\n")
             print("Gana la casa\n")
             return juego_nuevo()
     if valor_mano(mano_jug)>21:
@@ -80,9 +78,7 @@ def jugar(mano_casa, mano_jug, mazo, mostrar):
 
                 if valor_mano(mano_casa) < valor_mano2(mano_jug):
                     return jugar(mano_casa + [mazo[0]], mano_jug, mazo[1:], mostrar)
-                else:
-                    print("Casa: " + mostrar_mano(mano_casa) + "\n")
-                    print("Jugador: " + mostrar_mano(mano_jug) + "\n")    
+                else:   
                     print("Gana la casa\n")
                     return juego_nuevo()
     if valor_mano(mano_casa)>21:
@@ -93,9 +89,7 @@ def jugar(mano_casa, mano_jug, mazo, mostrar):
             return juego_nuevo()
         if valor_mano2(mano_casa) < valor_mano(mano_jug) or valor_mano2(mano_casa) < valor_mano2(mano_jug):
             return jugar(mano_casa + [mazo[0]], mano_jug, mazo[1:], mostrar)
-        else:
-            print("Casa: " + mostrar_mano(mano_casa) + "\n")
-            print("Jugador: " + mostrar_mano(mano_jug) + "\n")    
+        else: 
             print("Gana la casa\n")
             return juego_nuevo()
         
